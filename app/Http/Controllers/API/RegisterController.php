@@ -29,7 +29,7 @@ class RegisterController extends BaseController
         $input["password"] = bcrypt($input["password"]);
         $user = User::create($input);
         $success = [
-            "token" => $user->createToken("Token")->plainTextToken,
+            "token" => $user->createToken("Touken")->plainTextToken,
             "name" => $user->name,
         ];
         return $this->sendResponse($success, "User registered successfully.");
@@ -49,13 +49,13 @@ class RegisterController extends BaseController
         ) {
             $user = Auth::user();
             $success = [
-                "token" => $user->createToken("MyApp")->plainTextToken,
+                "token" => $user->createToken("Touken")->plainTextToken,
                 "name" => $user->name,
             ];
             return $this->sendResponse($success, "User login successfully.");
         } else {
-            return $this->sendError("Unauthorised.", [
-                "error" => "Unauthorised",
+            return $this->sendError("Unauthorized: username/password invalid", [
+                "error" => "Unauthorized",
             ]);
         }
     }
