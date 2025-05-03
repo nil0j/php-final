@@ -13,7 +13,7 @@ use Illuminate\Http\JsonResponse;
  *     @OA\Post(
  *         path="/api/login",
  *         summary="Login",
- *         tags={"User management"},
+ *         tags={"Users"},
  *         @OA\RequestBody(
  *             @OA\MediaType(
  *                 mediaType="application/json",
@@ -30,7 +30,7 @@ use Illuminate\Http\JsonResponse;
  *     @OA\Post(
  *         path="/api/register",
  *         summary="Register",
- *         tags={"User management"},
+ *         tags={"Users"},
  *         @OA\RequestBody(
  *             @OA\MediaType(
  *                 mediaType="application/json",
