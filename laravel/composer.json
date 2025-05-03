@@ -7,6 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "cweagans/composer-patches": "*",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1"
@@ -58,6 +59,11 @@
         ]
     },
     "extra": {
+    "patches": {
+        "nunomaduro/termwind": {
+            "Patches issue with libxml": "./termwind.patch"
+        }
+    },
         "laravel": {
             "dont-discover": []
         }
@@ -67,6 +73,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
+            "cweagans/composer-patches": true,
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
         }

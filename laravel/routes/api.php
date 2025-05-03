@@ -12,7 +12,6 @@ Route::controller(RegisterController::class)->group(function () {
     Route::post('login', [RegisterController::class, 'login']);
 });
 
-// Route::resource('products', ProductController::class);
 Route::middleware(['auth:sanctum', IsLoggedIn::class])->group(function () {
     Route::get('/products', [ProductController::class, 'index']);
 });
