@@ -1,5 +1,4 @@
 <template>
-
     <nav class="m-4 p-4 w-1/4 flex justify-center content-center ml-auto mr-auto gap-4">
         <router-link class="router-link glow-hover" to="/products"> Home </router-link>
         <a href="/login" class="router-link glow-hover"> Log in </a>

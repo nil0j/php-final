@@ -10,5 +10,5 @@ Route::get('login', function () {
 Route::post('login', [SessionManager::class, 'login'])->name('login');
 
 Route::get('/products/{vue_capture?}', function () {
-    return view('welcome');
+    return view('welcome')->with('token', session('api_token'));
 })->where('vue_capture', '[\/\w\.-]*');

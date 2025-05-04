@@ -3,4 +3,8 @@ import router from "./router";
 import { createApp } from "vue";
 import App from "./App.vue";
 
-createApp(App).use(router).mount("#app");
+const app = document.getElementById("app")
+const token = app.getAttribute("data")
+console.log(token)
+
+createApp(App).use(router).provide("token", token).mount("#app");
