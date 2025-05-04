@@ -10,3 +10,26 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+:root {
+    --bg-primary: #0a0010;
+    --bg-secondary: #201040;
+    --fg-primary: #dddddd;
+    --fg-secondary: #cc33ff;
+}
+
+* {
+    transition: 0.2s;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--fg-secondary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--fg-primary);
+}
