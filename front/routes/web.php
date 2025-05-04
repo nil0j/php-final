@@ -12,3 +12,7 @@ Route::post('login', [SessionManager::class, 'login'])->name('login');
 Route::get('/products/{vue_capture?}', function () {
     return view('welcome')->with('token', session('api_token'));
 })->where('vue_capture', '[\/\w\.-]*');
+
+Route::get('/', function () {
+    return view('welcome')->with('token', session('api_token'));
+});

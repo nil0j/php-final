@@ -2,12 +2,12 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
     {
-        path: "/products",
-        component: () => import("./Pages/ProductList.vue"),
+        path: "/",
+        component: () => import("./Pages/Home.vue"),
     },
     {
-        path: "/products/login",
-        component: () => import("./Pages/Login.vue"),
+        path: "/products",
+        component: () => import("./Pages/ProductList.vue"),
     },
 ];
 
